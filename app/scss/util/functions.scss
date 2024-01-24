@@ -1,0 +1,16 @@
+// - converts px to rems
+
+@use 'sass:math';
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+  @return (math.div($pixels, $context)) * 1rem;
+}
+//
+// $pixels is the input value in pixels that you want to convert to rems.
+// $context is an optional parameter with a default value of 16. It represents the base font size or context against which the conversion is done.
+// math.div($pixels, $context) is dividing the pixel value by the context.
+// The result is then multiplied by 1rem to convert it to rems.
+// The @return statement returns the final value.
+// For example, if you call rem(32), it would convert 32 pixels to rems based on the default context of 16, resulting in 2rem.
+// ex: 30px/16px = 1.875rem

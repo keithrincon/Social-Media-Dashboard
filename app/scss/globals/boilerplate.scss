@@ -1,0 +1,24 @@
+// for default styles
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  // ensures that if you add padding that the total width is going to include the padding
+  // ex: width=300, padding=20 : the with will still be 300
+  // content box is the opposite;
+  // ex: ex: width=300, padding=20 : the with will still be width = 340
+}
+
+// inherit box sizing from all html elements
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// resets
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter);
+}

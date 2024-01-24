@@ -1,0 +1,33 @@
+// - faster way to load media queries
+
+// 640px, 950px, 1400px
+$breakpoints-up: (
+  'medium': '40em',
+  'large': '59375em',
+  'xlarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+  'small': '39.9375em',
+  'medium': '59.3125em',
+  'large': '87.4375em',
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+// nested inside the sector
+
+// h1 {
+// @include breakpoint(large){
+// font-size: 3rem
+// }

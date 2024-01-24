@@ -1,0 +1,10 @@
+// being in the components folder
+// so we gotta go 1 up
+// imported as a wild card *
+
+@use '../util' as *;
+
+.card {
+  padding: rem(20);
+}
+// 20 px all around
