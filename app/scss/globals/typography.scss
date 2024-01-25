@@ -1,3 +1,4 @@
+@use '../util' as *;
 // for styles for the text elemetns, h tags, anchor links, etc
 
 // like to set the margin-top to 0
@@ -7,6 +8,13 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+}
+h1 {
+  font-size: rem(24);
+  margin-bottom: rem(3);
+  @include breakpoint(large) {
+    font-size: rem(28);
+  }
 }
 
 // anchor tags visited

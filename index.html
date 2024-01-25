@@ -39,8 +39,9 @@
   <body>
     <header class="header container">
       <div class="header__title">
+        <!-- html markup - keyword -->
         <h1>Social Media Dashboard</h1>
-        Total Followers: 23,004
+        <span class="header__subtitle">Total Followers: 23,004</span>
       </div>
 
       <!-- toggle a radio under a fieldset -->
@@ -49,7 +50,6 @@
         aria-label="theme toggle"
         role="radiogroup"
       >
-        <label for="light">Dark</label>
         <div class="toggle__wrapper">
           <input type="radio" name="theme" id="dark" />
           <input type="radio" name="theme" id="system" checked />
@@ -57,14 +57,100 @@
           <span aria-hidden="true" class="toggle__background"></span>
           <span aria-hidden="true" class="toggle__button"></span>
         </div>
-        <label for="light">System Pref</label>
+        <label for="dark">Dark</label>
+        <label for="system">System</label>
         <label for="light">Light</label>
       </fieldset>
     </header>
     <!-- when to use the main tag? -->
-    <!--  -->
+    <!-- Ploypane browser -->
     <main>
-      <section></section>
+      <!-- steps for card:
+      1. write markup
+    2. get styles working for card
+  3. fitting them into grid layout -->
+      <section class="container cards">
+        <!-- beginning of card -->
+        <div class="card card--facebook">
+          <div class="card__platform">
+            <img
+              class="card__icon"
+              src="images/icon-facebook.svg"
+              alt="Facebook"
+            />
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count card__count--big">1987</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <img src="/images/icon-up.svg" alt="up arrow" />
+            <div class="card__number">12 Today</div>
+          </div>
+        </div>
+        <!-- end of card -->
+        <!-- beginning of card -->
+        <div class="card card--twitter">
+          <div class="card__platform">
+            <img
+              class="card__icon"
+              src="images/icon-twitter.svg"
+              alt="Twitter"
+            />
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count card__count--big">1044</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <img src="/images/icon-up.svg" alt="up arrow" />
+            <div class="card__number">99 Today</div>
+          </div>
+        </div>
+        <!-- end of card -->
+        <!-- beginning of card -->
+        <div class="card card--instagram">
+          <div class="card__platform">
+            <img
+              class="card__icon"
+              src="images/icon-instagram.svg"
+              alt="Instagram"
+            />
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count card__count--big">11k</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--up">
+            <img src="/images/icon-up.svg" alt="up arrow" />
+            <div class="card__number">1099 Today</div>
+          </div>
+        </div>
+        <!-- end of card -->
+        <!-- beginning of card -->
+        <div class="card card--youtube">
+          <div class="card__platform">
+            <img
+              class="card__icon"
+              src="images/icon-youtube.svg"
+              alt="Youtube"
+            />
+            <div class="card__username">@nathanf</div>
+          </div>
+          <div class="card__followers">
+            <div class="card__count card__count--big">8239</div>
+            <div class="card__label">Followers</div>
+          </div>
+          <div class="card__change card__change--down">
+            <img src="/images/icon-down.svg" alt="down arrow" />
+            <div class="card__number">144 Today</div>
+          </div>
+        </div>
+        <!-- end of card -->
+      </section>
       @nathanf 1987 Followers 12 Today @nathanf 1044 Followers 99 Today
       @realnathanf 11k Followers 1099 Today Nathan F. 8239 Subscribers 144 Today
       Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile
