@@ -9,12 +9,14 @@
 // .card {
 // &
 
+// modifiers are the ones nested inside classes
+// helper classes- ex: card card--grid
+
 @use '../util' as *;
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-
   flex-wrap: wrap;
   gap: rem(30);
 
@@ -31,12 +33,18 @@
 .card {
   position: relative;
   overflow: hidden;
-  background: var(--dark-card);
+  background: var(--card-bg);
   color: var(--dark-text1);
   padding: rem(25);
   border-radius: rem(5);
   text-align: center;
   transition: background 150ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--card-hover);
+  }
+
   &--facebook {
     border-top: rem(5) solid var(--facebook);
   }
@@ -72,6 +80,11 @@
     height: rem(20);
     margin-bottom: rem(28);
   }
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--text-color2);
+  }
   &__icon {
     margin-right: rem(8);
     &--facebook {
@@ -92,7 +105,7 @@
     margin-bottom: rem(25);
   }
   &__count {
-    color: var(--light-bg);
+    color: var(--text-color);
     font-weight: 700;
     letter-spacing: rem(-2);
     line-height: 1;
@@ -101,13 +114,14 @@
       font-size: rem(56);
     }
     &--small {
+      font-size: rem(32);
     }
   }
   &__label {
     font-size: rem(12);
     letter-spacing: rem(5);
     font-weight: 400;
-    color: var(--dark-text1);
+    color: var(--text-color2);
     text-transform: uppercase;
   }
   &__change {
